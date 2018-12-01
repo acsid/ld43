@@ -8,10 +8,16 @@ local gameWorld = require 'gamestates.gameWorld'
 local pause = require 'gamestates.Pause' 
 
 
-gameName = "Kamikaze and Human Shield!";
+gameName = "43 Kamikaze and Human Shield!";
+
+function distance( x1, y1, x2,y2)
+  local dx = x1 - x2
+  local dy = y1 - y2 
+  return math.sqrt(dx *dx + dy * dy)
+end
 
 function love.load()
-	love.window.setTitle(("Ludum Dare - %s "):format(gameName))
+	love.window.setTitle(("Ludum Dare %s "):format(gameName))
 	Gamestate.registerEvents()
 	Gamestate.switch(gameWorld)
 end

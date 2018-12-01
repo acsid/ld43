@@ -6,6 +6,7 @@ local LevelBase = require 'gamestates.LevelBase'
 
 
 local Theking = require 'entities.theking'
+local Kamikaze = require 'entities.kamikaze'
 
 king = nil
 
@@ -55,6 +56,11 @@ function gameWorld:spawn(objects)
 		if object.name == "theKing" then
 			king = Theking(self.world,object.x,object.y)
 	LevelBase.Entities:add(king)
+   kamikaze = Kamikaze(self.world,king,object.x,object.y)
+   LevelBase.Entities:add(kamikaze)
+      kamikaze = Kamikaze(self.world,king,object.x+32,object.y)
+   LevelBase.Entities:add(kamikaze)
+  
 		end
  end
 end
