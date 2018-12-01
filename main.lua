@@ -4,11 +4,20 @@
 Gamestate = require 'libs.hump.gamestate'
 Timer = require 'libs.hump.timer'
 
+local gameWorld = require 'gamestates.gameWorld'
+local pause = require 'gamestates.Pause' 
 
-gameName = "Sacrifice must Be MADE!";
+
+gameName = "Kamikaze and Human Shield!";
 
 function love.load()
-	love.window.setTitle(("Ludum Dare 43 - %s "):format(gameName))
+	love.window.setTitle(("Ludum Dare - %s "):format(gameName))
 	Gamestate.registerEvents()
 	Gamestate.switch(gameWorld)
+end
+
+function love.keypressed(key)
+	if key == "escape" then
+		love.event.push("quit")	
+	end
 end
