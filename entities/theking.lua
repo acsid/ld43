@@ -33,7 +33,7 @@ local x,y,w,h = self.world:getRect(other)
 if other.isEnemy then
   return 'cross'
 end
-retrun 'slide'
+return 'slide'
 end
 
 function theking:update(dt)

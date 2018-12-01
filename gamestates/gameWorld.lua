@@ -57,11 +57,19 @@ function gameWorld:spawn(objects)
 			king = Theking(self.world,object.x,object.y)
 	LevelBase.Entities:add(king)
    kamikaze = Kamikaze(self.world,king,object.x,object.y)
+   kamikaze.isEnemy = false;
    LevelBase.Entities:add(kamikaze)
+   
       kamikaze = Kamikaze(self.world,king,object.x+32,object.y)
+      kamikaze.isEnemy = false;
    LevelBase.Entities:add(kamikaze)
   
-		end
+  end
+  if object.name == "kamikaze" then
+    kamikaze = Kamikaze(self.world,king,object.x,object.y)
+    kamikaze.isEnemy = true;
+   LevelBase.Entities:add(kamikaze)
+ end
  end
 end
 

@@ -11,7 +11,7 @@ function Entity:init(world, x, y , w, h,hp)
 	self.y = y
 	self.w = w
 	self.h = h
-  self.HP = hp or 1
+  self.hp = hp or 1
   self.isEntity = true
 end
 
@@ -33,10 +33,10 @@ function Entity:doDamage(hit)
     return
   end
   
-  self.HP = self.HP - hit
+  self.hp = self.hp - hit
 end
 function Entity:getHP()
-  return self.HP
+  return self.hp
 end
 
 function Entity:kill()
