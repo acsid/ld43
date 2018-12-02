@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" tiledversion="1.0.3" orientation="orthogonal" renderorder="right-down" width="100" height="100" tilewidth="32" tileheight="32" nextobjectid="2">
+<map version="1.0" tiledversion="1.0.3" orientation="orthogonal" renderorder="right-down" width="100" height="100" tilewidth="32" tileheight="32" nextobjectid="7">
  <tileset firstgid="1" source="tileset.tsx"/>
  <layer name="Tile Layer 1" width="100" height="100">
   <data encoding="csv">
@@ -107,5 +107,10 @@
  </layer>
  <objectgroup name="Spawn">
   <object id="1" name="theKing" x="1606" y="495" width="32" height="32"/>
+  <object id="2" name="kamikaze" x="1463" y="686"/>
+  <object id="3" name="kamikaze" x="1637" y="711" width="1" height="1"/>
+  <object id="4" name="kamikaze" x="1647" y="693"/>
+  <object id="5" name="kamikaze" x="1739" y="696"/>
+  <object id="6" name="kamikaze" x="1646" y="692"/>
  </objectgroup>
 </map>

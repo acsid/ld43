@@ -21,6 +21,8 @@ function kamikaze:init(world,king,x,y)
   self.isDefend = false
   self.isBomber = false
   self.isFaster = false
+  self.isAttacking = false
+  self.isHumanShield = false
 	
   self.isGrounded = false
 	self.friction = 20
