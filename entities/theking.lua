@@ -9,7 +9,11 @@ local theking = Class{
 
 
 function theking:init(world,x,y) 
-  Entity.init(self,world,x,y,32,32) --hard coded king size
+  
+  self.sprite = love.graphics.newImage("sprites/theking.png")
+   
+  
+  Entity.init(self,world,x,y,self.sprite:getWidth(),self.sprite:getHeight()) --hard coded king size
   
   --king variables
   
@@ -23,7 +27,7 @@ function theking:init(world,x,y)
   self.isPlayer = true
   
   --sprite 
-  self.sprite = love.graphics.newImage("sprites/theking.png")
+
   
   self.world:add(self,self:getRect())
 end
