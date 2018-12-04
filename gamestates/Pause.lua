@@ -10,7 +10,7 @@ function pause:draw()
 	self.from:draw()
 
 	  -- overlay with pause message
-  	love.graphics.setColor(0,0,0, 100)
+  	love.graphics.setColor(0,0,0, 25)
   	love.graphics.rectangle('fill', 0,0, w, h)
   	love.graphics.setColor(255,255,255)
   	love.graphics.printf('PAUSE', 0, h/2, w, 'center')

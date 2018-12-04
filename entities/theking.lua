@@ -19,8 +19,8 @@ function theking:init(world,x,y)
   
   self.xVelocity = 0
   self.yVelocity = 0
-  self.acc = 25 
-  self.maxSpeed = 100 --Top speed of the king
+  self.acc = 50 
+  self.maxSpeed = 120 --Top speed of the king
   
   self.friction = 20 --friction
   
@@ -37,7 +37,10 @@ local x,y,w,h = self.world:getRect(other)
 if other.isEnemy then
   return 'cross'
 end
-return 'slide'
+if other.isMechoui then
+  return'cross'
+end
+return 'cross'
 end
 
 function theking:update(dt)
